@@ -27,8 +27,8 @@ app.use(cors({
 app.use(express.json())
 app.use(cookieParser())
 
-app.use("/api/auth",auth)
-app.use("/api/music",musicRouter)
+app.use("/auth",auth)
+app.use("/music",musicRouter)
 
 
 module.exports=app
