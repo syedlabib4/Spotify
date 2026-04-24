@@ -29,6 +29,7 @@ export function AuthProvider({ children }) {
     };
     setUser(userData);
     localStorage.setItem('spotify_user', JSON.stringify(userData));
+    localStorage.setItem('spotify_token', res.data.token);
     return userData;
   };
 
@@ -42,6 +43,7 @@ export function AuthProvider({ children }) {
     };
     setUser(userData);
     localStorage.setItem('spotify_user', JSON.stringify(userData));
+    localStorage.setItem('spotify_token', res.data.token);
     return userData;
   };
 
@@ -49,6 +51,7 @@ export function AuthProvider({ children }) {
     await api.post('/auth/logout');
     setUser(null);
     localStorage.removeItem('spotify_user');
+    localStorage.removeItem('spotify_token');
   };
 
   return (

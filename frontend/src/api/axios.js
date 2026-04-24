@@ -8,4 +8,13 @@ const api = axios.create({
   },
 });
 
+// Add token from localStorage to all requests
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem('spotify_token');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
 export default api;
