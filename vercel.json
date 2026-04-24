@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "public": "frontend/dist",
   "builds": [
     {
       "src": "api/index.js",
