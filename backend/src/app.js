@@ -17,6 +17,7 @@ const allowedOrigins = [
   'http://localhost:5176',
   'http://localhost:3000',
   'https://spotify-clone-labib.netlify.app',
+  'https://spotify-fawn-theta.vercel.app',
   process.env.FRONTEND_URL || ''
 ].filter(url => url !== '');
 

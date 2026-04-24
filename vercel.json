@@ -1,19 +1,20 @@
 {
   "version": 2,
+  "public": "frontend/dist",
   "builds": [
     {
-      "src": "backend/src/api.js",
+      "src": "api/index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "backend/src/api.js"
+      "dest": "api/index.js"
     },
     {
       "src": "/(.*)",
-      "dest": "frontend/dist/index.html"
+      "dest": "/index.html"
     }
   ]
 }
